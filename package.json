@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "bib2md": "node scripts/bib2md.js"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
