@@ -55,6 +55,16 @@ code: "https://github.com/..."
 Paper description here...
 ```
 
+#### Import from BibTeX
+
+You can convert BibTeX files to Markdown automatically:
+
+```bash
+pnpm run bib2md path/to/references.bib
+```
+
+This will create one `.md` file per BibTeX entry in `src/content/publications/`. It handles multiple entries in a single `.bib` file and skips entries that already exist.
+
 ### Projects
 Add Markdown files to `src/content/projects/`:
 
@@ -79,6 +89,7 @@ Project details here...
 | `pnpm dev`     | Start dev server at `localhost:4321`        |
 | `pnpm build`   | Build for production to `./dist/`           |
 | `pnpm preview` | Preview production build locally            |
+| `pnpm run bib2md <file>` | Convert BibTeX to Markdown publications |
 
 ## 🎨 Customization
 
