@@ -1,7 +1,7 @@
 ---
-import Base from '../layouts/Base.astro';
+import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
-import author from '../data/author.json';
+import author from '../../data/author.json';
 
 const projects = await getCollection('projects');
 const sortedProjects = projects.sort((a, b) => {
