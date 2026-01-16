@@ -95,10 +95,9 @@ function toMarkdown(entry) {
   // Generate YAML frontmatter
   let yaml = '---\n';
   yaml += `title: "${frontmatter.title.replace(/"/g, '\\"')}"\n`;
-  yaml += `authors:\n${frontmatter.authors.map(a => `  - "${a}"`).join('\n')}\n`;
+  yaml += `authors: [${frontmatter.authors.map(a => `"${a}"`).join(', ')}]\n`;
   yaml += `venue: "${frontmatter.venue}"\n`;
   yaml += `year: ${frontmatter.year}\n`;
-  yaml += `date: ${frontmatter.date}\n`;
   yaml += `type: "${frontmatter.type}"\n`;
   if (frontmatter.doi) yaml += `doi: "${frontmatter.doi}"\n`;
   if (frontmatter.arxiv) yaml += `arxiv: "${frontmatter.arxiv}"\n`;
